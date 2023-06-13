@@ -1,8 +1,36 @@
 1)   Используйте команды операционной системы Linux и создайте две новых директории – «Игрушки для школьников» и «Игрушки для дошколят»
+	root@gbkras-VirtualBox:/home/gb-kras# mkdir Игрушки_для_Школьников
+	root@gbkras-VirtualBox:/home/gb-kras# mkdir Игрушки_для_дошколят
 2)   Создайте в директории «Игрушки для школьников» текстовые файлы - «Роботы», «Конструктор», «Настольные игры»
+	root@gbkras-VirtualBox:/home/gb-kras# cd Игрушки_для_Школьников/
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_Школьников# > Роботы
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_Школьников#  > Конструктор
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_Школьников# > Настольные_игры
 3)    Создайте в директории «Игрушки для дошколят» текстовые файлы «Мягкие игрушки», «Куклы», «Машинки»
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_Школьников# cd ..
+	root@gbkras-VirtualBox:/home/gb-kras# cd Игрушки_для_дошколят/
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_дошколят# > Мягкие_игрушки
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_дошколят# > Куклы
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_дошколят# > Машинки
 4)   Объединить 2 директории в одну «Имя Игрушки»
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки_для_дошколят# cd ..
+	root@gbkras-VirtualBox:/home/gb-kras# mkdir Имя_игрушки
+	root@gbkras-VirtualBox:/home/gb-kras# mv Игрушки_для_Школьников Имя_игрушки/
+	root@gbkras-VirtualBox:/home/gb-kras# mv Игрушки_для_дошколят Имя_игрушки/
 5)   Переименовать директорию «Имя Игрушки» в «Игрушки»
+	root@gbkras-VirtualBox:/home/gb-kras# mv Имя_игрушки Игрушки
 6)   Просмотреть содержимое каталога «Игрушки».
+	root@gbkras-VirtualBox:/home/gb-kras# cd Игрушки/
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки# ls
+	Игрушки_для_дошколят  Игрушки_для_Школьников
 7)   Установить и удалить snap-пакет. (Любой, какой хотите)
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки# snap install gimp
+	gimp 2.10.30 от Snapcrafters✪ установлен
+	root@gbkras-VirtualBox:/home/gb-kras/Игрушки# snap remove gimp
+	gimp удалено
 8)   Добавить произвольную задачу для выполнения каждые 3 минуты (Например, запись в текстовый файл чего-то или копирование из каталога А в каталог Б).
+	crontab -e
+	# For more information see the manual pages of crontab(5) and cron(8)
+	#
+	# m h  dom mon dow   command
+	*/3 * * * * mkdir myDir; touch myFile
