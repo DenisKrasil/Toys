@@ -1,0 +1,7 @@
+Toys [id=0, name=Doll, weight=25.0]
+Toys [id=1, name=Ball, weight=30.0]
+Toys [id=3, name=Rocket, weight=40.0]
+Toys [id=2, name=Bear, weight=5.0]
+Toys [id=2, name=Bear, weight=9.0]
+Toys [id=3, name=Rocket, weight=15.0]
+Toys [id=2, name=Bear, weight=9.0]
